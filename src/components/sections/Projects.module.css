@@ -1,5 +1,5 @@
 .projects {
-  padding: 50px 1.5rem;
+  padding: 100px 1.5rem;
   max-width: 900px;
   margin: 0 auto;
   border-bottom: 1px solid #eee;
@@ -19,8 +19,7 @@
 }
 
 .sltag:hover {
-    color: rgb(129, 183, 183);
-    background-color: aquamarine;
+    background-color: rgb(211, 218, 216);
 }
 
 .log {
@@ -42,15 +41,23 @@
 .box {
     padding: 10px;
     margin: 10px;
-    width: 400px;
+    width: 380px;
     border: 1px solid black;
     margin-top: 0%;
+    border-radius: 10px;
 }
 
 .box2 {
     padding: 10px;
     margin: 10px;
-    width: 350px;
+    width: 340px;
     border: 1px solid black;
     margin-top: 0%;
+    border-radius: 10px;
+}
+
+.container {
+  display: grid;                          /* 그리드 활성화 */
+  grid-template-columns: repeat(2, 1fr);  /* 두줄 정렬 */
+  justify-items: center;
 }

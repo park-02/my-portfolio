@@ -1,7 +1,5 @@
 .skills {
-  padding: 50px 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 100px 1.5rem;
   border-bottom: 1px solid #eee;
   text-align: center;
 }
@@ -18,13 +16,13 @@
 }
 
 .fullbox {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #d8dee6;
   border-radius: 8px;
   width: 180px; 
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* 일자 정렬 */
   align-items: center;
   gap: 0.8rem;
 }

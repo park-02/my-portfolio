@@ -1,0 +1,34 @@
+.career {
+  padding: 60px 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.career h2 {
+  margin-bottom: 2.5rem;
+}
+
+.careerCard {
+  display: flex;
+  gap: 1.5rem;
+  text-align: left; 
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;   
+}
+
+.period {
+  margin: 0 0 12px 0;
+  font-size: 0.88rem;
+  color: #8a9ba8;
+}
+
+.detailBox {
+  border-left: 3.5px solid #e67e22;
+  padding-left: 12px;
+}

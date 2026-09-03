@@ -9,8 +9,8 @@ export default function Hero() {
       <p>안녕하세요, <strong>{profile.name}</strong>입니다.</p>
 
       <div className={styles.links}>
-        <a href="#projects">프로젝트 보러가기</a>
-        <a href={profile.githubUrl} target="_blank" rel="noreferrer">
+        <a href="#projects" className={styles.project}>프로젝트 보러가기</a>
+        <a href={profile.githubUrl} target="_blank" rel="git" className={styles.git}>
           GitHub
         </a>
       </div>

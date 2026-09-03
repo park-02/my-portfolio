@@ -1,9 +1,8 @@
 .hero {
-  padding-top: 80px;
+  padding-top: 130px;
   padding-bottom: 40px;
   text-align: center;
-  border-bottom: 1px solid #eee;
-
+  border-bottom: 1px solid #e6e4e4;
 }
 
 .links {
@@ -18,5 +17,13 @@
   border: 1px solid #ccc;
   text-decoration: none;
   color: black;
-  border-radius: 4px;
+  border-radius: 8px;
+}
+
+.project:hover {
+  background-color: #e4e4e4;
+}
+
+.git:hover {
+  background-color: #e4e4e4;
 }
