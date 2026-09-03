@@ -1,0 +1,56 @@
+.projects {
+  padding: 50px 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.tag {
+    display: flex;
+    padding: 20px;
+}
+.sltag {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100px;
+}
+
+.sltag:hover {
+    color: rgb(129, 183, 183);
+    background-color: aquamarine;
+}
+
+.log {
+    width: 400px;
+}
+
+.log:hover {
+    color: aqua;
+}
+
+.poto {
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.box {
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    border: 1px solid black;
+    margin-top: 0%;
+}
+
+.box2 {
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+    border: 1px solid black;
+    margin-top: 0%;
+}
