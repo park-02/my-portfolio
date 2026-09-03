@@ -1,0 +1,21 @@
+.hero {
+  padding-top: 80px; /* GNB(65px) 뒤로 가려지는 현상 방지 */
+  padding-bottom: 40px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.links a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+}
