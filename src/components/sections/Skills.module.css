@@ -7,11 +7,11 @@
 }
 
 .skills h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container {
-display: flex;
+  display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
