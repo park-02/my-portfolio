@@ -1,5 +1,4 @@
 import { archives } from '../../data/archives';
-import { profile } from '../../data/profile';
 import styles from './Archive.module.css';
 
 export default function Archive() {
@@ -7,7 +6,6 @@ export default function Archive() {
     <section
       className={styles.archive}
       data-channels={archives.channels.length}
-      data-email={profile.email}
     />
   );
 }

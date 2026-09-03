@@ -1,0 +1,45 @@
+.about {
+    padding: 60px 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+
+}
+
+.about h2 {
+    margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: bold;
+
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.box p {
+  margin: 5px;
+}
