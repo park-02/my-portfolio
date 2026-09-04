@@ -1,4 +1,3 @@
-import ThemeSwitcher from './ThemeSwitcher';
 import styles from './Gnb.module.css';
 
 export default function Gnb() {
@@ -19,7 +18,6 @@ export default function Gnb() {
         </ul>
       </nav>
       
-      <ThemeSwitcher />
     </header>
   );
 }

@@ -24,7 +24,7 @@ export default function About() {
     </div>
 
     <div className={styles.box}>
-    <p><strong>학력: </strong>{about.school}</p>
+    <p style={{fontSize: 12}}><strong>학력: </strong>{about.school}</p>
     </div>
     </div>
     </div>

@@ -26,17 +26,19 @@
   flex-shrink: 0;
 }
 
-
 .box {
+  box-sizing: border-box; 
+  width: 250px;          
+  height: 120px;        
+  
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1rem 1.2rem;   
   text-align: left;
-  width: 250px;
-  height: 120px;
-  justify-self: center;
-}
 
+  display: flex;
+  align-items: center;
+}
 
 .info {
   display: grid; /* 세로 */

@@ -13,13 +13,13 @@
 .sltag {
     margin: 5px;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 15px;
     width: 100px;
 }
 
 .sltag:hover {
-    background-color: rgb(211, 218, 216);
+    background-color: rgb(227, 227, 227);
 }
 
 .log {
@@ -42,16 +42,21 @@
     padding: 10px;
     margin: 10px;
     width: 380px;
-    border: 1px solid black;
+    border: 1px solid #c1c1c1;
     margin-top: 0%;
     border-radius: 10px;
+}
+
+.box:hover {
+    background-color: rgb(227, 235, 243);
 }
 
 .box2 {
     padding: 10px;
     margin: 10px;
     width: 340px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
+    background-color: rgb(246, 251, 255);
     margin-top: 0%;
     border-radius: 10px;
 }
