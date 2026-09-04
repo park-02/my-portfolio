@@ -10,6 +10,7 @@
     display: flex;
     padding: 20px;
 }
+
 .sltag {
     margin: 5px;
     padding: 5px;
@@ -45,6 +46,7 @@
     border: 1px solid #c1c1c1;
     margin-top: 0%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .box:hover {
@@ -65,4 +67,25 @@
   display: grid;                          /* 그리드 활성화 */
   grid-template-columns: repeat(2, 1fr);  /* 두줄 정렬 */
   justify-items: center;
+}
+
+
+
+/*---------------------------*/
+
+
+.Language {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60px;
+    display: grid;
+    background-color: #fff9f9;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.git {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
 }

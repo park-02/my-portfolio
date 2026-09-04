@@ -9,12 +9,8 @@ export default function Archive() {
         <div className={styles.box}>
           <div className={styles.box2}>
             <h3>깃허브 주소</h3>
-            <a 
-              href='https://github.com/park-02' 
-              target='_blank' 
-              rel='noopener noreferrer'
-            >
-              park-02
+            <a href='https://github.com/park-02' target='_blank' className={styles.hover}>
+              github.com/park-02
             </a>
           </div>
 

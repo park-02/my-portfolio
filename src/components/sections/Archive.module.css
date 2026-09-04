@@ -26,3 +26,7 @@
   border-radius: 10px;
   padding: 1.5rem;
 }
+
+.hover:hover {
+  color:rgb(130, 195, 195)
+}
