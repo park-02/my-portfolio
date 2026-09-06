@@ -1,3 +1,4 @@
+/* About 전체 레이아웃 */
 .about {
     padding: 100px 1.5rem;
     max-width: 800px;
@@ -13,14 +14,14 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* 가로 방향 가운데 정렬 */
   gap: 2rem;
 }
 
 .poto {
   width: 180px;            
   height: 100%;             
-  object-fit: cover;        
+  object-fit: cover; /* 사진 깨짐 방지 */ 
   border-radius: 10px;
 }
 
@@ -35,12 +36,12 @@
   text-align: left;
 
   display: flex;
-  align-items: center;
+  align-items: center; /* 카드 높이 수직 중앙 정렬 */
 }
 
 .info {
-  display: grid; /* 세로 */
-  grid-template-columns: repeat(2, 1fr); /* 두줄 정렬 */
+  display: grid; /* 그리드 레이아웃 */
+  grid-template-columns: repeat(2, 1fr); /* 2개의 열을 1:1 동일 비율 배치 */
   gap: 12px;
   max-width: 540px;
   width: 100%;
