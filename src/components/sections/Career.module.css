@@ -16,6 +16,12 @@
   text-align: left; 
 }
 
+.careerList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .logo {
   width: 70px;
   height: 70px;
