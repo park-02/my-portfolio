@@ -8,9 +8,11 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <>
-      <Gnb />
-      {children}
-    </>
+    <html lang="ko">
+      <body>
+        <Gnb />
+        {children}
+      </body>
+    </html>
   );
 }
