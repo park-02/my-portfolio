@@ -1,69 +1,85 @@
 import { useState } from 'react';
 import styles from './Projects.module.css';
 import ProjectModal from '../project-modal/ProjectModal';
+import { PROJECT_LIST } from '../../data/projects';
+import type { ProjectItem } from '../../data/projects';
 
 export default function Projects() {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = (project: ProjectItem) => setSelectedProject(project);
+  const closeModal = () => setSelectedProject(null);
 
   return (
     <section id="projects" className={styles.projects}>
       <h2>Projects</h2>
 
-      <ul className={styles.tag}>
-        <li className={styles.sltag}><a href="#대표">대표</a></li>
-        <li className={styles.sltag}><a href="#전체">전체</a></li>
-        <li className={styles.sltag}><a href="#Frontend">Frontend</a></li>
-      </ul>
-
       <div className={styles.container}>
-        {/* 카드 영역 클릭 시 모달 열기 */}
-        <div className={styles.box} onClick={openModal} style={{ cursor: 'pointer' }}>
-          <div className={styles.poto}>
-            <img src="/images/OIP.jpg" alt="프로젝트 이미지" />
-          </div>
-          
-          <div className={styles.box2}>
-            <h3>넷엔드 지식관리 웹페이지</h3>
-            <h3>React 기반의 반응형 포트폴리오</h3>
-            <h3>"React", "Flask"</h3>
-          </div>
-          <div className={styles.log}> 
-            <a 
-              href="https://github.com/park-02/my-portfolio" 
-              target="_blank" 
-              rel="noreferrer"
-              onClick={(e) => e.stopPropagation()} // 링크 클릭 시 모달 열림 방지
-            >
-              깃허브 보기 -
-            </a>
-          </div>
-        </div>
-      </div>
+        {PROJECT_LIST.map((project) => (
+          <div
+            key={project.id}
+            className={styles.box}
+            onClick={() => openModal(project)}
+          >
+            <div className={styles.poto}>
+              <img src={project.imageSrc} alt={project.title} />
+            </div>
 
-      {/* 모달 컴포넌트 렌더링 */}
-      <ProjectModal isOpen={isModalOpen} onClose={closeModal}>
-        <h1>프로젝트</h1>
-        <p>2025.05 ~ 2025.07</p>
-        <p>프로젝트 상세 내용: 넷엔드 지식관리 페이지</p>
-        <div className={styles.Mcontainer}>
-          <div className={styles.Language}>
-            <p>React</p>
-          </div>
-            <div className={styles.Language}>
-            <p>Flask</p>
-          </div>
+            <div className={styles.box2}>
+              <h3>{project.title}</h3>
+              <p className={styles.subtitle}>{project.subtitle}</p>
+              <div className={styles.tagWrapper}>
+                {project.tags.map((tag) => (
+                  <span key={tag} className={styles.techTag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-          <div>
-            <p>프로젝트 설명: 넷엔드 지식관리 페이지 고객사 관리자 게스트 문의 및 회사내 지식관리</p>
-            <div className={styles.git}>
-              <a href='https://github.com/park-02/Cook_KMS_FrontEnd' rel='git' target='_blank'>Git</a>
+            <div className={styles.log}>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()} // 카드 클릭(모달 열림) 방지
+              >
+                깃허브 보기 →
+              </a>
             </div>
           </div>
-        </div>
+        ))}
+      </div>
 
+      {/* 선택된 프로젝트가 있을 때만 모달 렌더링 */}
+      <ProjectModal isOpen={Boolean(selectedProject)} onClose={closeModal}>
+        {selectedProject && (
+          <div className={styles.modalBody}>
+            <h2>{selectedProject.title}</h2>
+            <p className={styles.modalPeriod}>{selectedProject.period}</p>
+
+            <div className={styles.modalTags}>
+              {selectedProject.tags.map((tag) => (
+                <span key={tag} className={styles.modalTechTag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <p className={styles.modalDesc}>{selectedProject.description}</p>
+
+            <div className={styles.modalActions}>
+              <a
+                href={selectedProject.modalGithubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.gitBtn}
+              >
+                GitHub 저장소 방문
+              </a>
+            </div>
+          </div>
+        )}
       </ProjectModal>
     </section>
   );
