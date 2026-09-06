@@ -1,4 +1,3 @@
-import careersImg from './OIP.jpg';
 import styles from './Career.module.css';
 
 export default function Career() {
@@ -8,7 +7,7 @@ export default function Career() {
 
       <div className={styles.careerCard}>
 
-        <img src={careersImg} alt="로고" className={styles.logo} />
+        <img src="/images/OIP.jpg" alt="로고" className={styles.logo} />
 
         <div className={styles.content}>
           <h3>미래내일 일경험 프로젝트 · 대상</h3>

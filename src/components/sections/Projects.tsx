@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import projectImg from './OIP.jpg';
 import styles from './Projects.module.css';
 import ProjectModal from '../project-modal/ProjectModal';
 
@@ -23,7 +22,7 @@ export default function Projects() {
         {/* 카드 영역 클릭 시 모달 열기 */}
         <div className={styles.box} onClick={openModal} style={{ cursor: 'pointer' }}>
           <div className={styles.poto}>
-            <img src={projectImg} alt="프로젝트 이미지" />
+            <img src="/images/OIP.jpg" alt="프로젝트 이미지" />
           </div>
           
           <div className={styles.box2}>
