@@ -66,3 +66,33 @@ ul,
 ol {
   list-style: none;
 }
+
+/* 기본값 (default) */
+:root {
+  --primary-color: #2563eb;
+  --primary-bg: #eff6ff;
+}
+
+/* 빨간색 선택 시 */
+html[data-theme="red"] {
+  --primary-color: #dc2626;
+  --primary-bg: #fef2f2;
+}
+
+/* 주황색 선택 시 */
+html[data-theme="orange"] {
+  --primary-color: #ea580c;
+  --primary-bg: #fff7ed;
+}
+
+/* 노란색 선택 시 */
+html[data-theme="yellow"] {
+  --primary-color: #ca8a04;
+  --primary-bg: #fefce8;
+}
+
+/* 초록색 선택 시 */
+html[data-theme="green"] {
+  --primary-color: #16a34a;
+  --primary-bg: #f0fdf4;
+}
