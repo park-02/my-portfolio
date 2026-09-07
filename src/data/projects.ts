@@ -18,7 +18,7 @@ export const PROJECT_LIST: ProjectItem[] = [
     subtitle: "딥페이크 이미지·동영상 및 생성형 텍스트 판별 시스템",
     period: "2026.03 ~ 2026.06",
     imageSrc: "/images/ai.jpg",
-    tags: ["Python", "PyTorch", "Computer Vision", "FastAPI"],
+    tags: ["Python", "PyTorch", "FastAPI"],
     category: "Backend",
     githubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
     modalGithubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
