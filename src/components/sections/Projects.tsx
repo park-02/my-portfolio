@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import styles from './Projects.module.css';
-import ProjectModal from '../project-modal/ProjectModal';
-import { PROJECT_LIST } from '../../data/projects';
-import type { ProjectItem } from '../../data/projects';
+import { useState } from "react";
+import styles from "./Projects.module.css";
+import ProjectModal from "../project-modal/ProjectModal";
+import { PROJECT_LIST } from "../../data/projects";
+import type { ProjectItem } from "../../data/projects";
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
+    null,
+  );
 
   const openModal = (project: ProjectItem) => setSelectedProject(project);
   const closeModal = () => setSelectedProject(null);
@@ -27,6 +29,7 @@ export default function Projects() {
 
             <div className={styles.box2}>
               <h3>{project.title}</h3>
+              <p className={styles.period}>{project.period}</p>
               <p className={styles.subtitle}>{project.subtitle}</p>
               <div className={styles.tagWrapper}>
                 {project.tags.map((tag) => (
@@ -37,16 +40,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className={styles.log}>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // 카드 클릭(모달 열림) 방지
-              >
-                깃허브 보기 →
-              </a>
-            </div>
+            <div className={styles.log}>자세히 보기 →</div>
           </div>
         ))}
       </div>

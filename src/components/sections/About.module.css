@@ -1,14 +1,14 @@
 /* About 전체 레이아웃 */
 .about {
-    padding: 100px 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    border-bottom: 1px solid #eee;
-    text-align: center;
+  padding: 100px 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  text-align: center;
 }
 
 .about h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -19,24 +19,26 @@
 }
 
 .poto {
-  width: 180px;            
-  height: 100%;             
-  object-fit: cover; /* 사진 깨짐 방지 */ 
+  width: 180px;
+  height: 100%;
+  object-fit: cover; /* 사진 깨짐 방지 */
   border-radius: 10px;
 }
 
 .box {
-  box-sizing: border-box; 
-  width: 250px;          
-  height: 120px;        
-  
+  box-sizing: border-box;
+  width: 250px;
+  height: 120px;
+
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 1rem 1.2rem;   
+  padding: 1rem 1.2rem;
   text-align: left;
 
   display: flex;
   align-items: center; /* 카드 높이 수직 중앙 정렬 */
+
+  box-shadow: 5px 2px 1px gray;
 }
 
 .info {

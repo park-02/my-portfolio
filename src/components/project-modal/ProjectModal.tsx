@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
-import styles from './ProjectModal.module.css';
+import type { ReactNode } from "react";
+import styles from "./ProjectModal.module.css";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -7,7 +7,11 @@ interface ProjectModalProps {
   children?: ReactNode;
 }
 
-export default function ProjectModal({ isOpen, onClose, children }: ProjectModalProps) {
+export default function ProjectModal({
+  isOpen,
+  onClose,
+  children,
+}: ProjectModalProps) {
   if (!isOpen) return null;
 
   return (

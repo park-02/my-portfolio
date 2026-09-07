@@ -15,8 +15,8 @@
 }
 
 .box2 {
-  flex: 1; 
-  min-width: 0; 
+  flex: 1;
+  min-width: 0;
 
   display: flex;
   flex-direction: column;
@@ -25,8 +25,19 @@
   border: 1px solid rgb(194, 192, 192);
   border-radius: 10px;
   padding: 1.5rem;
+
+  box-shadow: 5px 2px 1px gray;
+}
+
+.box2 a {
+  color: #333333; /* 기본 본문 텍스트 색상 */
+  text-decoration: none; /* 파란 밑줄 제거 */
 }
 
 .hover:hover {
-  color:rgb(130, 195, 195)
+  color: rgb(130, 195, 195);
+}
+
+.box2 > * {
+  margin: 0 !important;
 }

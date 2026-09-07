@@ -1,5 +1,5 @@
-import Layout from './app/layout';
-import Page from './app/page';
+import Layout from "./app/layout";
+import Page from "./app/page";
 
 function App() {
   return (
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

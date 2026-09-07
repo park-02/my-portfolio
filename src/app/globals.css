@@ -1,6 +1,6 @@
 /* 전역 스타일: 폰트 + 디자인 토큰 + 리셋 (전역 공용) */
-@import '../styles/fonts.css';
-@import '../styles/tokens.css';
+@import "../styles/fonts.css";
+@import "../styles/tokens.css";
 
 /* ---------------------------------------------------------------
  * Reset

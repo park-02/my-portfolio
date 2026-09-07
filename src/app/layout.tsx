@@ -1,18 +1,15 @@
-import type { ReactNode } from 'react';
-import Gnb from '../components/common/Gnb';
-import './globals.css';
+import type { ReactNode } from "react";
+import Gnb from "../components/common/Gnb";
 
-type LayoutProps = {
-  children: ReactNode;
-};
+interface LayoutProps {
+  children?: ReactNode;
+}
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <html lang="ko">
-      <body>
-        <Gnb />
-        {children}
-      </body>
-    </html>
+    <div className="layout-wrapper">
+      <Gnb />
+      <main>{children}</main>
+    </div>
   );
 }
