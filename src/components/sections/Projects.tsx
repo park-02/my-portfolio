@@ -4,20 +4,19 @@ import ProjectModal from "../project-modal/ProjectModal";
 import { PROJECT_LIST } from "../../data/projects";
 import type { ProjectItem } from "../../data/projects";
 
+const TAG_LIST = [
+  "ALL",
+  ...Array.from(new Set(PROJECT_LIST.flatMap((p) => p.tags))),
+];
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
-    null,
+    null
   );
   const [selectedTag, setSelectedTag] = useState<string>("ALL");
 
   const openModal = (project: ProjectItem) => setSelectedProject(project);
   const closeModal = () => setSelectedProject(null);
-
-  const tagList = useMemo(() => {
-    const tags = new Set<string>();
-    PROJECT_LIST.forEach((p) => p.tags.forEach((t) => tags.add(t)));
-    return ["ALL", ...Array.from(tags)];
-  }, []);
 
   const filteredProjects = useMemo(() => {
     if (selectedTag === "ALL") return PROJECT_LIST;
@@ -29,7 +28,7 @@ export default function Projects() {
       <h2>Projects</h2>
 
       <div className={styles.filterWrapper}>
-        {tagList.map((tag) => (
+        {TAG_LIST.map((tag) => (
           <button
             key={tag}
             type="button"
@@ -48,7 +47,7 @@ export default function Projects() {
             className={styles.box}
             onClick={() => openModal(project)}
           >
-            <div className={styles.poto}>
+            <div className={styles.photo}>
               <img src={project.imageSrc} alt={project.title} />
             </div>
 

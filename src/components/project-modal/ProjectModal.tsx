@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import styles from "./ProjectModal.module.css";
 
 interface ProjectModalProps {
@@ -12,6 +12,17 @@ export default function ProjectModal({
   onClose,
   children,
 }: ProjectModalProps) {
+  // 모달 활성화 시 배경 스크롤 차단 및 닫힐 때 원복
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (

@@ -2,6 +2,24 @@
 @import "../styles/fonts.css";
 @import "../styles/tokens.css";
 
+/* 1. 최상위 루트 및 DOM 기준 스무스 스크롤 강제 */
+:root {
+  scroll-behavior: smooth !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth !important;
+}
+
+body,
+#root,
+#modal-root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------------------------------------------------------------
  * Reset
  * ------------------------------------------------------------- */
@@ -13,13 +31,7 @@
   padding: 0;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-}
-
 body {
-  min-height: 100vh;
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
@@ -65,4 +77,13 @@ select {
 ul,
 ol {
   list-style: none;
+}
+
+html,
+:root {
+  scroll-behavior: smooth !important;
+}
+
+* {
+  scroll-behavior: smooth !important;
 }

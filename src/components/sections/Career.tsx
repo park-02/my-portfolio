@@ -42,8 +42,7 @@ export default function Career() {
               alt={item.logoAlt}
               className={styles.logo}
             />
-
-            <div className={styles.conten}>
+            <div>
               <h3>{item.title}</h3>
               <p className={styles.period}> {item.period}</p>
 

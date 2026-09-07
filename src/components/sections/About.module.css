@@ -27,8 +27,8 @@
 
 .box {
   box-sizing: border-box;
-  width: 250px;
-  height: 120px;
+  width: 100%;
+  min-height: 115px;
 
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -47,4 +47,14 @@
   gap: 12px;
   max-width: 540px;
   width: 100%;
+}
+
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column; /* 사진과 정보 상하 배치 */
+  }
+  .info {
+    grid-template-columns: 1fr; /* 모바일 1열 */
+  }
 }
