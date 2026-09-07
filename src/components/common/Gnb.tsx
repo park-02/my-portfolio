@@ -27,6 +27,18 @@ export default function Gnb() {
           <li>
             <a href="#archive">Archive</a>
           </li>
+
+          <li>
+            <div className={styles.box}>
+              <select>
+                <option>기본</option>
+                <option>빨간색</option>
+                <option>주황색</option>
+                <option>노란색</option>
+                <option>초록색</option>
+              </select>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>

@@ -52,3 +52,7 @@
 .navList a:hover {
   color: #86a7dc;
 }
+
+.box {
+  border: 10px;
+}
