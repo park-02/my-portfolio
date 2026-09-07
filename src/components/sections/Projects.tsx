@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import styles from "./Projects.module.css";
 import ProjectModal from "../project-modal/ProjectModal";
 import { PROJECT_LIST } from "../../data/projects";
@@ -8,16 +8,41 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
   );
+  const [selectedTag, setSelectedTag] = useState<string>("ALL");
 
   const openModal = (project: ProjectItem) => setSelectedProject(project);
   const closeModal = () => setSelectedProject(null);
+
+  const tagList = useMemo(() => {
+    const tags = new Set<string>();
+    PROJECT_LIST.forEach((p) => p.tags.forEach((t) => tags.add(t)));
+    return ["ALL", ...Array.from(tags)];
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    if (selectedTag === "ALL") return PROJECT_LIST;
+    return PROJECT_LIST.filter((p) => p.tags.includes(selectedTag));
+  }, [selectedTag]);
 
   return (
     <section id="projects" className={styles.projects}>
       <h2>Projects</h2>
 
+      <div className={styles.filterWrapper}>
+        {tagList.map((tag) => (
+          <button
+            key={tag}
+            type="button"
+            className={`${styles.filterBtn} ${selectedTag === tag ? styles.activeFilter : ""}`}
+            onClick={() => setSelectedTag(tag)}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+
       <div className={styles.container}>
-        {PROJECT_LIST.map((project) => (
+        {filteredProjects.map((project) => (
           <div
             key={project.id}
             className={styles.box}

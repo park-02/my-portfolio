@@ -115,6 +115,38 @@
   text-decoration: underline;
 }
 
+/* 필터 버튼 영역 */
+.filterWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filterBtn {
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #64748b;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.filterBtn.activeFilter {
+  background-color: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+}
+
 /* ---------------- 모달 내부 스타일 ---------------- */
 .modalBody {
   text-align: left;
