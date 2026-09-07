@@ -5,7 +5,6 @@ export interface ProjectItem {
   period: string;
   imageSrc: string;
   tags: string[];
-  category: "대표" | "Frontend" | "Backend";
   githubUrl: string;
   modalGithubUrl: string;
   description: string;
@@ -19,7 +18,6 @@ export const PROJECT_LIST: ProjectItem[] = [
     period: "2026.03 ~ 2026.06",
     imageSrc: "/images/ai.jpg",
     tags: ["Python", "PyTorch", "FastAPI"],
-    category: "Backend",
     githubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
     modalGithubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
     description:
@@ -32,7 +30,6 @@ export const PROJECT_LIST: ProjectItem[] = [
     period: "2025.05 ~ 2025.07",
     imageSrc: "/images/netand.jpg",
     tags: ["React", "Flask"],
-    category: "대표",
     githubUrl: "https://github.com/park-02/Cook_KMS_FrontEnd",
     modalGithubUrl: "https://github.com/park-02/Cook_KMS_FrontEnd",
     description:
@@ -45,7 +42,6 @@ export const PROJECT_LIST: ProjectItem[] = [
     period: "2025.03 ~ 2025.06",
     imageSrc: "/images/crawling.jpg",
     tags: ["Python", "React", "FastAPI"],
-    category: "Frontend",
     githubUrl: "https://github.com/Si-1-Han/2025ChatBot",
     modalGithubUrl: "https://github.com/Si-1-Han/2025ChatBot",
     description:
@@ -58,7 +54,6 @@ export const PROJECT_LIST: ProjectItem[] = [
     period: "2024.09 ~ 2024.12",
     imageSrc: "/images/plan.jpg",
     tags: ["HTML", "CSS", "JavaScript"],
-    category: "Frontend",
     githubUrl: "https://github.com/Si-1-Han/2024Scheduler",
     modalGithubUrl: "https://github.com/Si-1-Han/2024Scheduler",
     description:
@@ -71,7 +66,6 @@ export const PROJECT_LIST: ProjectItem[] = [
     period: "2024.03 ~ 2024.06",
     imageSrc: "/images/esp32.jpg",
     tags: ["Arduino", "ESP32", "Node-RED", "Firebase", "MQTT"],
-    category: "Frontend",
     githubUrl: "https://github.com/park-02/2024-1_Smart-Devices",
     modalGithubUrl: "https://github.com/park-02/2024-1_Smart-Devices",
     description:
