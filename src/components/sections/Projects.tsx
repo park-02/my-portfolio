@@ -19,6 +19,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
   );
+
   const [selectedTag, setSelectedTag] = useState<string>("ALL");
 
   const filteredProjects = useMemo(() => {
@@ -82,7 +83,7 @@ export default function Projects() {
 
       {/* 선택된 프로젝트가 있을 때만 모달 렌더링 */}
 
-      {/* project -> projectmodal로 ustState(selectedProject)로 넘겨준다. */}
+      {/* projectmodal을 그리는 곳에서 useState를 사용한다 */}
       <ProjectModal isOpen={Boolean(selectedProject)} onClose={closeModal}>
         {selectedProject && (
           <div className={styles.modalBody}>
