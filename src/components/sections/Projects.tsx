@@ -15,6 +15,7 @@ export default function Projects() {
   // selectedTag 상태의 초기값은 항상 ALL
   // 클릭한 프로젝트 객체를 상태에 저장하여 모달을 여는 함수
 
+  // selectedProject를 useState선언
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
   );
@@ -55,6 +56,7 @@ export default function Projects() {
           <div
             key={project.id}
             className={styles.box}
+            // project박스 클릭해서 setSelectedProject로 상태변경
             onClick={() => openModal(project)}
           >
             <div className={styles.photo}>
@@ -79,6 +81,8 @@ export default function Projects() {
       </div>
 
       {/* 선택된 프로젝트가 있을 때만 모달 렌더링 */}
+
+      {/* project -> projectmodal로 ustState(selectedProject)로 넘겨준다. */}
       <ProjectModal isOpen={Boolean(selectedProject)} onClose={closeModal}>
         {selectedProject && (
           <div className={styles.modalBody}>
