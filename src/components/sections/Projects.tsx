@@ -4,29 +4,40 @@ import ProjectModal from "../project-modal/ProjectModal";
 import { PROJECT_LIST } from "../../data/projects";
 import type { ProjectItem } from "../../data/projects";
 
+// "ALL"을 맨 앞에 두고, 각 프로젝트의 tags를 모아 중복을 제거한 태그 목록 생성
 const TAG_LIST = [
   "ALL",
   ...Array.from(new Set(PROJECT_LIST.flatMap((p) => p.tags))),
 ];
 
 export default function Projects() {
+  // 선택된 프로젝트 상태 관리: ProjectItem 또는 null(유니온 타입)을 가지며 초기값은 null(닫힌 상태)
+  // selectedTag 상태의 초기값은 항상 ALL
+  // 클릭한 프로젝트 객체를 상태에 저장하여 모달을 여는 함수
+
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null,
   );
   const [selectedTag, setSelectedTag] = useState<string>("ALL");
-
-  const openModal = (project: ProjectItem) => setSelectedProject(project);
-  const closeModal = () => setSelectedProject(null);
 
   const filteredProjects = useMemo(() => {
     if (selectedTag === "ALL") return PROJECT_LIST;
     return PROJECT_LIST.filter((p) => p.tags.includes(selectedTag));
   }, [selectedTag]);
 
+  const openModal = (project: ProjectItem) => setSelectedProject(project);
+
+  // 프로젝트 상태를 null로 초기화하여 모달을 닫는 함수
+  const closeModal = () => setSelectedProject(null);
+
+  // 선택한 태그에 맞춰 프로젝트 목록 필터링 (selectedTag 변경 시에만 재연산)
+  // "ALL"이 선택되어 있으면 전체 프로젝트 목록 반환
+  // 특정 태그가 선택되어 있으면 해당 태그를 가진 프로젝트만 필터링하여 반환
+
   return (
     <section id="projects" className={styles.projects}>
       <h2>Projects</h2>
-
+      {/* 위에 태그 리스트 */}
       <div className={styles.filterWrapper}>
         {TAG_LIST.map((tag) => (
           <button
@@ -39,7 +50,6 @@ export default function Projects() {
           </button>
         ))}
       </div>
-
       <div className={styles.container}>
         {filteredProjects.map((project) => (
           <div
@@ -50,7 +60,6 @@ export default function Projects() {
             <div className={styles.photo}>
               <img src={project.imageSrc} alt={project.title} />
             </div>
-
             <div className={styles.box2}>
               <h3>{project.title}</h3>
               <p className={styles.period}>{project.period}</p>

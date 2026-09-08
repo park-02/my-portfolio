@@ -25,7 +25,7 @@ export default function Gnb() {
             <a href="#career">Career</a>
           </li>
           <li>
-            <a href="#archive">Archive</a>
+            <a href="#Contact">Contact</a>
           </li>
         </ul>
       </nav>

@@ -1,8 +1,30 @@
+/* PC 기본 스타일 */
 .hero {
-  padding-top: 250px;
-  padding-bottom: 235px;
+  padding-top: 200px;
+  padding-bottom: 180px;
   text-align: center;
   border-bottom: 1px solid #e6e4e4;
+  padding-left: 20px; /* 모바일/태블릿 좌우 여백 확보 */
+  padding-right: 20px;
+}
+
+/* 헤더/네비게이션 영역 정렬 */
+.header,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo,
+.title {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .links {
@@ -20,10 +42,30 @@
   border-radius: 8px;
 }
 
-.project:hover {
+.project:hover,
+.git:hover {
   background-color: #e4e4e4;
 }
 
-.git:hover {
-  background-color: #e4e4e4;
+/* =========================================
+   모바일 반응형 (768px 이하)
+========================================= */
+@media (max-width: 768px) {
+  /* 1. 모바일에서는 과도한 여백 축소 */
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  /* 2. 메인 헤드라인 폰트 크기 조절 (글자 잘림 방지) */
+  .hero h1 {
+    font-size: 1.5rem;
+    word-break: keep-all; /* 한글 단어 단위 줄바꿈 */
+    line-height: 1.4;
+  }
+
+  /* 3. 상단 메뉴 링크 숨김 */
+  .navLinks {
+    display: none;
+  }
 }
