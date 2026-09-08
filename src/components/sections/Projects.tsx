@@ -11,7 +11,7 @@ const TAG_LIST = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
-    null
+    null,
   );
   const [selectedTag, setSelectedTag] = useState<string>("ALL");
 

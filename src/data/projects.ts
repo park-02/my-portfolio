@@ -17,7 +17,7 @@ export const PROJECT_LIST: ProjectItem[] = [
     subtitle: "딥페이크 이미지·동영상 및 생성형 텍스트 판별 시스템",
     period: "2026.03 ~ 2026.06",
     imageSrc: "/images/ai.jpg",
-    tags: ["Python", "PyTorch", "FastAPI"],
+    tags: ["Manifest V3", "JavaScript", "Python", "PyTorch", "FastAPI"],
     githubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
     modalGithubUrl: "https://github.com/KimIl0207/2026_Graduation_project",
     description:
@@ -41,7 +41,7 @@ export const PROJECT_LIST: ProjectItem[] = [
     subtitle: "웹 데이터 실시간 수집 및 대화형 챗봇 인터페이스 개발",
     period: "2025.03 ~ 2025.06",
     imageSrc: "/images/crawling.jpg",
-    tags: ["Python", "React", "FastAPI"],
+    tags: ["HTML", "CSS", "JavaScript", "Python", "FastAPI"],
     githubUrl: "https://github.com/Si-1-Han/2025ChatBot",
     modalGithubUrl: "https://github.com/Si-1-Han/2025ChatBot",
     description:
