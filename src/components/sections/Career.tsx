@@ -12,7 +12,7 @@ interface CareerItem {
 const CAREER_LIST: CareerItem[] = [
   {
     id: 1,
-    title: "현대 오토에버 모빌리티 부트캠프",
+    title: "현대오토에버 모빌리티 부트캠프",
     period: "2026.06 - 진행 중 (6개월)",
     logoSrc: "/images/HD.jpg",
     logoAlt: "현대오토에버 로고",
