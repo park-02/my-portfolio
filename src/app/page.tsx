@@ -1,4 +1,4 @@
-import Archive from "../components/sections/Archive";
+import Contact from "../components/sections/Contact";
 import About from "../components/sections/About";
 import Career from "../components/sections/Career";
 import Hero from "../components/sections/Hero";
@@ -13,7 +13,7 @@ export default function Page() {
       <Skills />
       <Projects />
       <Career />
-      <Archive />
+      <Contact />
     </>
   );
 }
