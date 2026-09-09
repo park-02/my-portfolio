@@ -1,8 +1,8 @@
 import styles from "./Contact.module.css";
 
-export default function Archive() {
+export default function contact() {
   return (
-    <section id="archive" className={styles.archive}>
+    <section id="Contact" className={styles.archive}>
       <h2>Contact</h2>
 
       <div className={styles.container}>
